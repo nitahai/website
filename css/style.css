@@ -1,0 +1,694 @@
+
+html, body {
+        background-color: #fff;
+        color: #21252E;
+        }
+        
+        
+        
+        .navbar-custom {
+        background-color: #F7F7FF;
+        transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+        }
+        .navbar-scroll {
+        background-color: white !important;
+        border-bottom: 2px solid #eee; /* Border transparan */
+        }
+        
+        
+        #preview {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-dialog-fullscreen {
+            max-width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .modal-content-fullscreen {
+            height: 100%;
+            border: 0;
+        }
+        .modal-body {
+            overflow-y: auto;
+        }
+        .card-custom {
+            border: 4px dashed #D3D5DC;
+            border-radius: 25px;
+            overflow: hidden;
+            text-align: center;
+            padding: 25px;
+            cursor: pointer;
+            background: #F7F7FF;
+            height: 300px; /* Adjust the height as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-custom img {
+            width: 100px; /* Adjust the size of the icon */
+            height: 100px; /* Adjust the size of the icon */
+            margin-bottom: 15px;
+        }
+        .card-custom .btn-file {
+            
+            border-radius: 10px;
+            padding: 14px;
+            background: TRANSPARENT;
+            width: 80%;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+            
+        }
+        .card-custom .btn-file:hover {
+            background: #fff;
+        }
+        .card-custom .btn-file input {
+            display: none;
+        }
+        /* Kelas tombol dengan keadaan disabled */
+        .btn-custom-disabled {
+        background-color: #E90C42; /* Warna abu-abu */
+        border-color: #6c757d;
+        color: white;
+        border: 0px solid #FF3A5D;
+        font-size: 18px;
+        cursor: not-allowed; /* Menunjukkan tombol tidak dapat ditekan */
+        }
+        
+        /* Tambahkan efek hover untuk disabled button */
+        .btn-custom-disabled:hover {
+        background-color: #FF3A5D; /* Warna abu-abu lebih terang untuk efek hover */
+        border-color: #FF3A5D;
+        border: 0px solid #232323;
+        color: #e0e0e0; /* Warna teks lebih terang */
+        }
+        
+        /* Kelas tombol dengan keadaan active */
+        .btn-custom-active {
+        background-color: #E90C42; /* Warna biru */
+        border-color: #FF3A5D;
+        color: white;
+        font-size: 18px;
+        border: 0px solid #232323;
+        cursor: pointer; /* Menunjukkan tombol dapat ditekan */
+        }
+        
+        /* Tambahkan efek hover untuk active button */
+        .btn-custom-active:hover {
+        background-color: #FF3A5D; /* Warna biru lebih gelap untuk efek hover */
+        border-color: #FF3A5D;
+        border: 0px solid #232323;
+        color: #ffffff; /* Warna teks sedikit lebih terang */
+        }
+        
+        /* Tambahkan efek ketika tombol ditekan (active state) */
+        .btn-custom-active:active {
+        background-color: #FF3A5D; /* Warna biru lebih gelap saat ditekan */
+        border-color: #FF3A5D;
+        border: 0px solid #232323;
+        color: #d0d0d0; /* Warna teks lebih gelap */
+        }
+        
+        .spinner-border-sm {
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.2em;
+        }
+        
+        .modal-backdrop.show {
+        backdrop-filter: blur(10px); /* Efek blur pada background */
+        }
+        
+        .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Maksimal lebar container */
+        }
+        
+        .img-roasting {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        }
+        
+        #thumbPreview {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1; /* Agar gambar perbesar berada di atas gambar preview */
+        cursor: pointer;
+        border-radius: 300px;
+        }
+
+        
+        mark a {
+        color: #FF3A5D;
+        text-decoration: none !important;
+        }
+        
+        mark a:hover {
+        color: #383838;
+        }
+        
+        a {
+        color: #FF3A5D;
+        text-decoration: none;
+        }
+        a:hover {
+        color: #383838;
+        }
+        
+       
+ 
+.bg-hitam {
+  background-color: #fff;
+  color: #21252E;
+ }
+ 
+ .bg-hitam-2 {
+ background-color: #fff;
+ #21252E;
+ }
+ 
+ 
+.bg-card {
+  background-color: #232323;
+  color: white;
+ }
+
+.bg {
+background: linear-gradient(45deg, #F6F5E6, #F2DFFF, #FEFEFA, #F2DFFF);
+background-size: 100% 400%;
+animation: gradientAnimation 15s ease infinite;
+}
+
+h1 {
+letter-spacing: 0.4px; /* Menambahkan jarak antara huruf */
+}
+
+h4 {
+letter-spacing: 0.4px; /* Menambahkan jarak antara huruf */
+}
+
+p {
+letter-spacing: 0.5px; /* Menambahkan jarak antara huruf */
+}
+
+.lazy {
+filter: blur(10px);
+transition: filter 0.3s ease-out;
+}
+.lazy-loaded {
+filter: blur(0);
+}
+
+.lh {
+line-height: 1.6;
+}
+
+.lh-2 {
+line-height: 1.3;
+}
+
+.social {
+text-decoration: none;
+}
+
+.btns {
+background-color: #1F1F22;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 18px;
+letter-spacing: 0.4px;
+}
+
+.btns:hover {
+background-color: #A02BEA;
+color: white;
+border: none;
+}
+
+.btns:active {
+background-color: #A02BEA;
+color: white;
+border: none;
+}
+
+/* Gaya default untuk border form */
+.form-control {
+border-color: #ced4da; /* Warna border default */
+transition: border-color 0.3s ease-in-out;
+}
+
+/* Gaya border saat form diisi (valid) */
+.form-control:valid {
+border-color: #000; /* Warna border saat form diisi */
+}
+
+/* Menghilangkan border kuning bawaan Bootstrap saat input difokuskan */
+.form-control:focus {
+border-color: #A02BEA; /* Warna border saat input fokus */
+box-shadow: none; /* Menghilangkan efek shadow bawaan */
+}
+
+/* Gaya tombol share */
+.btn-share {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background-color: black; /* Warna hitam */
+color: white;
+border: none;
+border-radius: 50px; /* Rounded 100 */
+padding: 10px 20px;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+
+.btn-share:hover, .btn-share:active {
+ background-color: #A02BEA;
+ color: white;
+}
+
+
+.bginput {
+background-color: rgba(255, 255, 255, 0.5);
+
+backdrop-filter: blur(10px); /* Efek blur di belakang elemen */
+-webkit-backdrop-filter: blur(10px); /* Efek blur untuk kompatibilitas WebKit */
+}
+
+
+@keyframes gradientAnimation {
+0% {
+background-position: 0% 0%;
+}
+50% {
+background-position: 100% 100%;
+}
+100% {
+background-position: 0% 0%;
+}
+}
+   
+
+.nav-link {
+color: #21252E;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: #5a2d81; /* Color on hover */
+}
+
+.nav-link:active {
+color: #6f42c1; /* Color when clicked */
+}
+
+.gede {
+font-size: 2.8rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+}
+.sub {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+}
+
+.card-icon {
+height: 50px;
+width: 50px;
+border: 2px solid #D5D5D5;
+border-radius: 300px;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.card-icon img {
+height: 20px;
+width: 20px;
+margin-top: 13px;
+}
+
+.card-icons {
+height: 70px;
+width: 70px;
+border: 2px solid #E5E5E5;
+border-radius: 300px;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.card-icons img {
+height: 40px;
+width: 40px;
+margin-top: 13px;
+}
+
+p {
+margin: 0;
+}
+
+.btnig {
+display: inline-flex;
+align-items: center;
+font-size: 1rem;
+color: white;
+background-color: black;
+padding: 0.5rem 1rem;
+border-radius: 100px;
+}
+
+.custom-link {
+display: inline-block;
+width: 80%;
+height: 60px;
+background-color: black;
+color: white;
+text-align: center;
+line-height: 60px;
+border-radius: 10px;
+text-decoration: none;
+font-size: 1.1rem;
+transition: background-color 0.3s ease;
+}
+
+.custom-link:hover {
+background-color: #A02BEA;
+color: white;
+}
+
+.custom-link:active {
+background-color: #A02BEA;
+color: white;
+}
+
+.btnig svg {
+width: 24px;
+height: 24px;
+margin-right: 0.5rem;
+}
+
+.mt-100 {
+margin-top: 30px;
+}
+.navbar-logo {
+max-width: 180px;
+}
+
+.footer-logo {
+max-width: 160px;
+margin-bottom: -10px;
+}
+
+.border-pic {
+border: 2px solid #eee;
+padding: 10px;
+}
+
+.f400 {
+font-family: "Rubik", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+.f500 {
+font-family: "Rubik", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+}
+
+.f600 {
+font-family: "Rubik", sans-serif;
+font-optical-sizing: auto;
+font-weight: 600;
+font-style: normal;
+}
+
+.f700 {
+font-family: "Rubik", sans-serif;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+}
+
+ .hid {
+ 
+ color: #21252E;
+ 
+ }
+ 
+   
+
+.shine {
+background: #f6f7f8;
+background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+background-repeat: no-repeat;
+background-size: 800px 504px; 
+display: inline-block;
+position: relative; 
+
+-webkit-animation-duration: 1s;
+-webkit-animation-fill-mode: forwards; 
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-name: placeholderShimmer;
+-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes placeholderShimmer {
+0% {
+background-position: -468px 0;
+}
+
+100% {
+background-position: 468px 0; 
+}
+}
+
+.photo {
+width: 150px;
+height: 150px;
+border-radius: 300px;
+}
+
+.lines {
+width: 150px;
+height: 20px;
+}
+
+.lines1 {
+width: 100px;
+height: 20px;
+}
+
+.boxs {
+width: 300px;
+height: 300px;
+}
+
+.liness {
+width: 80px;
+height: 2px;
+background-color: #eee;
+display: inline-block;
+position: relative;
+}
+
+.border-btm {
+border-bottom: 1px solid #eee;
+}
+
+.border-btm-2 {
+border-bottom: 0px solid #383838;
+}
+
+.bgc {
+background: #F8F9FE;
+color: #21252E;
+}
+
+.bgv {
+background: #FEF2F2;
+color: #21252E;
+}
+
+.bgt {
+background: #fff;
+color: #21252E;
+}
+
+.border-roast {
+            position: relative;
+            padding: 10px;
+            border: 1px solid #ABACB1;
+            margin-top: 20px;
+            box-sizing: border-box; /* Terapkan box-sizing pada border */
+ }
+
+        .border-roast:before {
+            content: "";
+            position: absolute;
+            top: -14px; /* Menempatkan teks di atas border */
+            left: 19px;
+            background-color: transparent;
+            padding: 0 5px;
+            color: black;
+            font-size: 16px;
+        }
+
+.op {
+opacity: 0.7;
+}
+
+.navbar {
+border-bottom: 0px solid #eee; /* Tambahkan border bawah pada navbar */
+}
+
+.btn-close {
+border: none;
+box-shadow: none;
+background: none;
+}
+
+.btn-close:focus {
+ outline: none;
+ border: none;
+ box-shadow: none;
+}
+
+.btn-close {
+border: none;
+box-shadow: none;
+background: none;
+}
+
+.btn-close:focus {
+ outline: none;
+ border: none;
+ box-shadow: none;
+}
+
+.btn-close1 {
+border: none;
+box-shadow: none;
+background: #fff;
+border-radius: 50%;
+height: 40px;
+width: 40px;
+padding: 10px;
+}
+
+.btn-close1:focus {
+ outline: none;
+ border: none;
+ box-shadow: none;
+}
+
+.navbar-toggler {
+border: none;
+box-shadow: none;
+background: none;
+}
+.navbar-toggler:focus {
+ outline: none;
+ border: none;
+ box-shadow: none;
+}
+
+.navbar-toggler:active {
+outline: none;
+ border: none;
+}
+.navbar-toggler-icon {
+display: none;
+}
+.offcanvas-body {
+font-size: 30px;
+padding: 1.5rem 1rem;
+}
+.offcanvas-body a {
+display: block;
+margin-bottom: 1rem;
+text-decoration: none;
+color: #21252E;
+}
+.offcanvas-body a:hover {
+text-decoration: none;
+color: #FF3A5D;
+}
+.offcanvas-footer {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+background: #F7F7FF;
+border-top: 1px solid #dee2e;
+text-align: left;
+font-size: 25px;
+}
+.offcanvas-footer .social-icons {
+}
+.offcanvas-footer .social-icons a {
+margin: 0 0.5rem;
+color: #21252E;
+text-decoration: none;
+}
+.offcanvas-footer .social-icons a:hover {
+color: #E90C42;
+}
+@media (min-width: 992px) {
+.offcanvas {
+display: none;
+}
+}
+
+       .loader {
+            display: flex;
+            gap: 15px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            animation: bounce 1.1s infinite ease-in-out;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+        
+   
