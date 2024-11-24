@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Nitah - Asisten Belajar Pintar untuk Semua Pelajar</title>
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="Nitah - Asisten Belajar Pintar untuk Semua Pelajar" />
+    <meta name="description" content="Dapatkan jawaban lengkap soal pelajaran sekolahmu dengan Nitah. Unggah soal dan nikmati belajar mudah tanpa biaya!" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nitah.web.id/" />
+    <meta property="og:title" content="Nitah - Asisten Belajar Pintar untuk Semua Pelajar" />
+    <meta property="og:description" content="Dapatkan jawaban lengkap soal pelajaran sekolahmu dengan Nitah. Unggah soal dan nikmati belajar mudah tanpa biaya!" />
+    <meta property="og:image" content="images/banner.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nitah.web.id/" />
+    <meta property="twitter:title" content="Nitah - Asisten Belajar Pintar untuk Semua Pelajar" />
+    <meta property="twitter:description" content="Dapatkan jawaban lengkap soal pelajaran sekolahmu dengan Nitah. Unggah soal dan nikmati belajar mudah tanpa biaya!" />
+    <meta property="twitter:image" content="images/banner.png" />
+   
+   
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="fav/android-icon-192x192.png">
+    <link rel="icon" type="fav/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="fav/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="fav/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#F7F7FF">
+    <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#F7F7FF">
+
+     <!-- Bootstrap CSS -->
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+     <link href="css/app.css" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- Link Swiper CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+     <style type="text/css">
+     
+     .swiper-container {
+     width: 100%;
+     height: auto;
+     }
+     
+     .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #fff;
+     width: 80%;
+     padding: 30px;
+     border-radius: 20px;
+     }
+     
+     .swiper-slide img {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     margin-bottom: 15px;
+     }
+     
+     /* Mengatur posisi pagination agar di bawah slider */
+     .swiper-pagination {
+     position: relative;
+     text-align: center;
+     margin-top: 50px; /* Memastikan pagination sejajar di bawah card */
+     }
+     
+     .swiper-pagination-bullet {
+     width: 8px;
+     height: 8px;
+     background-color: #DEDEDE;
+     opacity: 1 !important;
+     }
+     
+     .swiper-pagination-bullet-active {
+     background-color: #E90C42;
+     }
+     
+     
+     
+     
+     </style>
+    
+</head>
+<body>
+
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark pe-2 py-3 fixed-top navbar-custom">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+    <img src="images/logo.png" alt="Logo" class="d-inline-block align-top navbar-logo" style="margin-left: 5px;" height="40">
+    </a>
+    <button class="navbar-toggler text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <img src="images/menu.png" width="25"/>
+    </button>
+    <div class="offcanvas offcanvas-end pe-4 py-2 bg-hitam" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+    <img src="images/logo.png" alt="Logo" class="d-inline-block align-top navbar-logo" style="margin-left: -1px;" height="40">
+    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
+     <img src="images/close.png" width="17" style="margin-top: -15px;"/>
+    
+    </button>
+    </div>
+    <div class="offcanvas-body mx-3 mt-3 f500">
+    <a href="/" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">Beranda</a>
+    <a href="#fitur" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">Cara kerja nitah</a>
+    <a href="https://saweria.co/zakikaidzan" target="_blank">Dukungan</a>
+    <a href="tentang">Tentang</a>
+    </div>
+    <div class="offcanvas-footer p-5">
+    <div class="social-icons" style="margin-left: -10px;">
+    <a href="https://instagram.com/akhirpetang" target="_blank" class="fab fa-instagram"></a>
+    <a href="https://twitter.com/akhirpetang" target="_blank" class="fab fa-twitter"></a>
+    <a href="https://dribbble.com/zakiakaidzan" target="_blank" class="fab fa-dribbble"></a>
+    </div>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#fitur">Fitur</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="https://saweria.co/zakikaidzan">Dukungan</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="tentang">Tentang</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    
+    
+    
+    <div class="main-content">
+    
+    <section style=" background: #F7F7FF;">
+    <div class="container pb-5 pt-3">
+        <h1 class="mx-3 f500 lh-2 text-center" style="margin-top: 100px; font-size: 27px;">Cukup unggah foto soal pelajaran sekolahmu &  dapatkan jawaban lengkap dan tepat</h1>
+
+
+        <form id="form" class="mt-5 mx-3">
+            <div class="card card-custom mb-3">
+                <img src="images/upload.png" alt="Image Icon" style="opacity: 0.3;">
+                <label class="btn-file mb-2 f400">        <span id="chooseText" style="opacity: 0.6;">Pilih file foto soalmu telusuri dari perangkat</span>
+                    <input type="file" id="photo" accept="image/*" required>
+                </label>
+                <small id="fileNameDisplay" class="form-text text-muted d-block mt-2 d-none"></small>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="button" class="btn btn-custom-disabled w-100 py-3 rounded-4 f400">
+                    Temukan jawaban
+                </button>
+            </div>
+        </form>
+        
+    </div>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F7F7FF" fill-opacity="1" d="M0,128L120,106.7C240,85,480,43,720,42.7C960,43,1200,85,1320,106.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+    <section class="mt-2 mx-3 d-lg-none">
+    <div class="container">
+    
+    <img class="img-fluid mb-3 rounded-4" alt="Image Preview" src="images/hero.webp">
+
+    </div>
+    </section>
+    
+    <section class="mb-5" id="fitur" style="margin-top: 30px;">
+    
+    <div class="container sec1">
+    <div class="mt-5 mb-5 mx-3 text-center">
+    <p class="mb-2 f600 lh" style="font-size: 0.8rem; color: #FF3A5D;">NITAH TEMAN PINTAR</p>
+    <h1 class="mb-3 f500 lh-2">Solusi cepat untuk menjawab semua soal mata pelajaranmu</h1>
+    <p class="f400 lh">Mudah, cepat, dan efektif. Begini cara menggunakan Nitah untuk memecahkan soal-soal pelajaranmu!</p>
+    </div>
+    <div class="row mx-2">
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bgc border-0">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="images/gallery.png">
+    </div>
+    <h4 class="card-title f500">Unggah Foto Soalmu</h4>
+    <p class="card-text f400 lh op mt-3">Ambil foto soal mata pelajaran sekolahmu</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bgv border-0">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="images/cari.png">
+    </div>
+    <h4 class="card-title f500">Proses Cepat</h4>
+    <p class="card-text f400 lh op mt-3">Nitah akan menganalisis soal dan memberi jawaban dalam hitungan detik.</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bgc border-0">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="images/buku.png">
+    </div>
+    <h4 class="card-title f500 lh-2">Dapatkan Jawaban Instan</h4>
+    <p class="card-text f400 lh op mt-3">Lihat jawaban yang lengkap dan terperinci dengan penjelasan yang mudah dipahami.</p>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-4 mb-3">
+    <div class="card p-3 rounded-4 bgv border-0">
+    <div class="card-body">
+    <div class="card-icons">
+    <!-- You can use Font Awesome or any other icon library here -->
+    <img src="images/lamp.png">
+    </div>
+    <h4 class="card-title f500">Pahami Materi Lebih Baik</h4>
+    <p class="card-text f400 lh op mt-3">Nitah memberikan penjelasan yang membantu kamu mengerti setiap langkah penyelesaiannya.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    </section>
+    
+    
+     <section style=" background: #F7F7FF;">
+    
+    <div class="py-5">
+    <div class="mx-4 mb-5">
+    <h1 class="text-center f500 lh-2">Apa Kata Pelajar yang Telah Menggunakan Nitah</h1>
+    </div>
+    
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMF9waG90b19vZl95b3VuZ19hc2lhbl9naXJsX2hvbGRpbmdfc3R1ZGVudF9iYV9iNDc0YjIyZC1jODdmLTRmMjItYmNhMy00NmE4NGZmZWUyMGNfMi5qcGc.jpg" alt="User 1">
+    <p class="f500"><strong>Tari Siswi Smp</strong></p>
+    <p class="f400 lh op">Tak pernah secepat ini menyelesaikan soal! Jawabannya langsung muncul dan penjelasannya? Jelas banget, bikin ngerti dalam sekejap.</p>
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMF9waG90b19vZl95b3VuZ19hc2lhbl9tYW5faG9sZGluZ19zdHVkZW50X2JhY19mMjQ4OGFkZC00NDhkLTQwY2ItOGI4NC04OTBlMDg5MmY3NDhfMi5qcGc.jpg" alt="User 2">
+    <p class="f500"><strong>Rizky Siswa Sma</strong></p>
+    <p class="f400 lh op">Nitah bener-bener jadi andalan! Semua soal bisa langsung terjawab dengan cepat, tanpa biaya. Belajar jadi lebih seru!</p>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMF9waG90b19vZl95b3VuZ19tdXNsaW1fZ2lybF9ob2xkaW5nX3N0dWRlbnRfYl84ZGFlYmRlNy0zODkyLTRhMTAtOWE0ZS0wNDQyYjM3OTBjNjZfMi5qcGc.jpg" alt="User 3">
+    <p class="f500"><strong>Rahma Siswi Smk</strong></p>
+    <p class="f400 lh op">Nggak perlu lagi bingung sama soal-soal susah. Nitah selalu ada untuk kasih solusi, dan penjelasannya sangat membantu banget</p>
+    </div>
+    </div>
+    
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+   
+    </div>
+    </div>
+    
+    </section>
+    
+    
+    <section>
+    <div class="container">
+    
+    <div class="mt-5 mb-5 mx-3 text-center">
+    <h1 class="mb-3 f500 lh-2">Mulai Belajar dengan Nitah Sekarang!</h1>
+    <p class="f400 lh">Unggah soalmu dan nikmati pengalaman belajar yang menyenangkan</p>
+    </div>
+    
+    </div>
+    </section>
+    
+    
+    <div class="container mt-5">
+    <div class="row align-items-center bgv rounded-5 mx-3">
+    <!-- Teks -->
+    <div class="col-md-6 text-left text-md-start">
+    <h2 class="card-title lh-2 f500 px-4 pt-5 pb-4">
+    Mencari Soal Jawaban Jadi Lebih Mudah Bersama <span class="highlights">Nitah</span>
+    </h2>
+    
+    <div class="highlight f400 mx-4">
+    <i class="fas fa-check-circle"></i> Semua mata pelajaran sekolah
+    </div>
+    <div class="highlight f400 mx-4">
+    <i class="fas fa-check-circle"></i> Jawaban instan dan akurat
+    </div>
+    <div class="highlight f400 mx-4">
+    <i class="fas fa-check-circle"></i> 100% gratis tanpa biaya
+    </div>
+    <a href="#" class="cta-button btn mt-3 f500 crd">Coba Sekarang!</a>
+    </div>
+    
+    <!-- Gambar -->
+    <div class="col-md-6 text-center">
+    <img src="images/hero2.webp" class="card-img-bottom" alt="Nitah Image">
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    <div class="container">
+    <footer class="py-3 my-4 text-center">
+    <img src="images/logo.png" alt="Logo" class="navbar-logo mb-3" height="40">
+    <ul class="nav justify-content-center border-btm pb-3 mb-3">
+    <li class="nav-item"><a href="#" class="nav-link px-2 hid f400">Beranda</a></li>
+    <li class="nav-item"><a href="#fitur" class="nav-link px-2 hid f400">Cara kerja nitah</a></li>
+    <li class="nav-item"><a href="https://saweria.com/zakikaidzan" class="nav-link px-2 hid f400">Dukungan</a></li>
+    <li class="nav-item"><a href="tentang" class="nav-link px-2 hid f400">Tentang</a></li>
+    </ul>
+    <p class="text-center text-body-secondary f400">&copy; 2024 Nitah</p>
+    </footer>
+    </div>
+    
+    
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-content-fullscreen rounded-4" style=" background: #F7F7FF;">
+    <div class="modal-header pt-4 pb-3 border-btm-2" style="padding-right: 25px;">
+    <h5 class="modal-title f500" id="modalLabel"></h5>
+    <button type="button" class="btn-close1" data-bs-dismiss="modal" aria-label="Close">
+    <img src="images/close.png" width="12" style="margin-top: -7px;"/>
+    
+    </button>
+    </div>
+    
+    
+    <div class="modal-body">
+    <div id="loadingPage">
+    <div class="border-roast rounded-4" style=" width: 100%; height: 100%; margin-top: -8px;">
+    <img id="potoPreview" class="img-fluid rounded-4" src="" alt="Foto untuk roasting">
+    <div class="scan-line-box">
+    <div class="scan-line"></div>
+    </div>
+    </div>
+    
+    </div>
+     
+     <div class="image-container" id="modalPr" style="display: none;">
+     <img id="modalPreview" class="img-fluid mb-3 rounded-4 img-roasting mb-3" alt="Image Preview" style="display: none;">
+     <img id="thumbPreview" src="images/pr.png" alt="Enlarge Image" class="img-thumbnail">
+     </div>
+     
+     <div class="border-roast rounded-4 f400" id="modalBorder" style="display: none; background: white;">
+     <div id="modalRoast" class="p-3 f400 lh" style="display: none;"></div>
+     </div>
+     
+     <div class="mt-3" style="display: none !important;" id="infos">
+     <div class="alert alert-danger d-flex align-items-center">
+     <svg class="w-6 h-6 text-gray-800 dark:text-white me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.408-5.5a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z" clip-rule="evenodd"/>
+     </svg>
+     
+     <div class="f400 lh-2">
+     Jika kamu tidak menemukan hasil jawabannya harap coba lagi.
+     </div>
+     </div>
+     </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-content-fullscreen rounded-4" style=" background: #F7F7FF;">
+    <div class="modal-header pt-4 pb-3 border-btm-2" style="padding-right: 25px;">
+    <h5 class="modal-title f500"></h5>
+    <button type="button" class="btn-close1" data-bs-dismiss="modal" aria-label="Close">
+    <img src="images/close.png" width="12" style="margin-top: -7px;"/>
+    
+    </button>
+    </div>
+    
+    <div class="modal-body">
+    <img id="modalImage" src="" class="img-fluid rounded-4" alt="Perbesar Gambar">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Link Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/apis.js"></script>
+    
+    <script>
+    // JavaScript untuk mengubah warna navbar saat scroll
+    const navbar = document.querySelector('.navbar-custom');
+    
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+    navbar.classList.add('navbar-scroll');
+    navbar.classList.remove('navbar-dark');
+    navbar.classList.add('navbar-light');
+    } else {
+    navbar.classList.remove('navbar-scroll');
+    navbar.classList.add('navbar-dark');
+    navbar.classList.remove('navbar-light');
+    }
+    });
+    </script>
+    
+    <script>
+    // Menampilkan gambar perbesar di modal saat diklik
+    document.getElementById('thumbPreview').addEventListener('click', function() {
+    var imgSrc = document.getElementById('modalPreview').src;
+    document.getElementById('modalImage').src = imgSrc; // Mengambil src gambar yang di klik
+    var myModal = new bootstrap.Modal(document.getElementById('imageModal'), {
+    keyboard: true
+    });
+    myModal.show(); // Menampilkan modal
+    });
+    </script>
+    
+    <script>
+    // Inisialisasi Swiper dengan konfigurasi yang diinginkan
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",      // Agar slide dapat terlihat dalam ukuran otomatis
+    centeredSlides: true,       // Agar slide yang aktif berada di tengah
+    spaceBetween: 20,           // Jarak antara slide
+    pagination: {
+    el: ".swiper-pagination", // Elemen pagination
+    clickable: true,          // Pagination bisa diklik
+    },
+    });
+    </script>
+</body>
+</html>
