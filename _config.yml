@@ -1,1 +1,22 @@
+# Pengaturan Umum
+title: Nitah - Asisten Belajar Pintar untuk Semua Pelajar
+description: Dapatkan jawaban lengkap soal pelajaran sekolahmu dengan Nitah. Unggah soal dan nikmati belajar mudah tanpa biaya!
+baseurl: ""
+url: "https://nitah.web.id"
+markdown: kramdown
+
+# Permalink (URL halaman)
 permalink: /:name/
+
+# Metadata halaman
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "Nitah"
+
+# Permintaan untuk robots.txt
+robots_txt:
+  - "User-agent: *"
+  - "Sitemap: https://nitah.web.id/sitemap.xml"
